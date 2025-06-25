@@ -1,0 +1,86 @@
+
+/* === Loyalty Page Styles === */
+.loyalty-body {
+  font-family: 'Inter', sans-serif;
+  background: #f9f6f0;
+  color: #3d3d3d;
+  margin: 0;
+}
+
+.loyalty-hero {
+  background: url('assets/coffee-bg.jpg') center/cover no-repeat;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.loyalty-hero .overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.loyalty-card-section,
+.claim-section,
+.rewards-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.loyalty-card h2,
+.claim-section h2,
+.rewards-section h2 {
+  color: #3d5a40;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #eee;
+  border-radius: 6px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #3d5a40;
+}
+
+.claim-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.claim-form input,
+.claim-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.claim-form button {
+  background: #3d5a40;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.rewards-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rewards-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}

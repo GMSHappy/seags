@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sags Coffee</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">Sags Coffee</a>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+  <li><a href="#about">About</a></li>
+  <li><a href="#menu">Menu</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="loyalty.html">Loyalty Program</a></li>
+</ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="assets/Vid1.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay">
+      <h1>Fuel Your Day at Sags Coffee</h1>
+      <a href="#menu" class="btn">View Menu</a>
+    </div>
+  </header>
+
+  <section id="menu" class="section menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <h3>Fresh Coffee</h3>
+        <p>Espresso, Latte, Cappuccino, Iced Coffee</p>
+      </div>
+      <div class="menu-card">
+        <h3>Snacks</h3>
+        <p>Pastries, Muffins, Scones, Croissants</p>
+      </div>
+      <div class="menu-card">
+        <h3>Breakfast</h3>
+        <p>Toasties, Breakfast Baps, Wraps, Omelettes</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-grid">
+      <img src="assets/1.webp" alt="Coffee" />
+      <img src="assets/2.webp" alt="Shop" />
+      <img src="assets/3.webp" alt="Trailer" />
+    </div>
+  </section>
+
+  <section id="map" class="section map">
+    <h2>Find Us</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps?q=St.+Nicholas+GFC,+Drogheda,+Louth,+Ireland&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Get in Touch</h2>
+    <p><strong>Email:</strong> <a href="mailto:sagscoffee@gmail.com">sagscoffee@gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:0852285475">0852285475</a>, <a href="tel:0894023429">0894023429</a></p>
+    <p><strong>Location:</strong> St. Nicholas GFC, Drogheda, Louth, Ireland</p>
+    <p><strong>Opening Hours:</strong></p>
+    <ul class="hours">
+      <li>Mon–Fri: 7:30am – 5pm</li>
+      <li>Sat: 8am – 4pm</li>
+      <li>Sun: 10am – 4pm</li>
+    </ul>
+    <div class="social">
+      <a href="https://linktr.ee/sagscoffee1" target="_blank">Visit Our Linktree</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sags Coffee. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

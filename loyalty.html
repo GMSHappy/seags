@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sags Coffee – Loyalty Claim</title>
+  <link rel="stylesheet" href="loyalty_styles.css" />
+    <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Sags Coffee Loyalty</h1>
+    <p>Earn one point per day. Log in below:</p>
+
+    <div id="login-section">
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <button onclick="signup()">Sign Up</button>
+      <button onclick="googleLogin()">Login with Google</button>
+    </div>
+
+    <div id="user-section" style="display:none;">
+      <p id="user-email"></p>
+      <button onclick="claimPoint()">Claim Today's Point</button>
+      <p id="claim-message"></p>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="loyalty.js"></script>
+</body>
+</html>
