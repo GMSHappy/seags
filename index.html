@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sags Coffee</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <nav class="navbar">
-    <div class="container">
+    <div class="nav-container">
       <a href="#" class="logo">Sags Coffee</a>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-      <ul class="nav-links">
-  <li><a href="#about">About</a></li>
-  <li><a href="#menu">Menu</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="loyalty.html">Loyalty Program</a></li>
-</ul>
+      <div class="menu-toggle" id="mobile-menu">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="loyalty.html">Loyalty</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -32,7 +33,7 @@
     </div>
   </header>
 
-  <section id="menu" class="section menu">
+  <section id="menu" class="section fade-in">
     <h2>Our Menu</h2>
     <div class="menu-grid">
       <div class="menu-card">
@@ -50,35 +51,27 @@
     </div>
   </section>
 
-  <section id="gallery" class="section gallery">
+  <section id="gallery" class="section gallery fade-in">
     <h2>Photo Gallery</h2>
     <div class="gallery-grid">
-      <img src="assets/1.webp" alt="Coffee" />
-      <img src="assets/2.webp" alt="Shop" />
-      <img src="assets/3.webp" alt="Trailer" />
+      <img src="assets/1.webp" alt="Coffee">
+      <img src="assets/2.webp" alt="Shop">
+      <img src="assets/3.webp" alt="Trailer">
     </div>
   </section>
 
-  <section id="map" class="section map">
+  <section id="contact" class="section fade-in">
     <h2>Find Us</h2>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps?q=St.+Nicholas+GFC,+Drogheda,+Louth,+Ireland&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
-
-  <section id="contact" class="section contact">
-    <h2>Get in Touch</h2>
-    <p><strong>Email:</strong> <a href="mailto:sagscoffee@gmail.com">sagscoffee@gmail.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:0852285475">0852285475</a>, <a href="tel:0894023429">0894023429</a></p>
-    <p><strong>Location:</strong> St. Nicholas GFC, Drogheda, Louth, Ireland</p>
-    <p><strong>Opening Hours:</strong></p>
-    <ul class="hours">
-      <li>Mon–Fri: 7:30am – 5pm</li>
-      <li>Sat: 8am – 4pm</li>
-      <li>Sun: 10am – 4pm</li>
-    </ul>
-    <div class="social">
-      <a href="https://linktr.ee/sagscoffee1" target="_blank">Visit Our Linktree</a>
+    <iframe class="map" src="https://www.google.com/maps?q=St.+Nicholas+GFC,+Drogheda,+Louth,+Ireland&output=embed"></iframe>
+    <div class="contact-details">
+      <p><strong>Email:</strong> <a href="mailto:sagscoffee@gmail.com">sagscoffee@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:0852285475">0852285475</a>, <a href="tel:0894023429">0894023429</a></p>
+      <p><strong>Location:</strong> St. Nicholas GFC, Drogheda, Louth</p>
+      <p><strong>Hours:</strong><br>
+        Mon–Fri: 7:30am–5pm<br>
+        Sat: 8am–4pm<br>
+        Sun: 10am–4pm</p>
+      <a href="https://linktr.ee/sagscoffee1" class="btn" target="_blank">Visit Our Linktree</a>
     </div>
   </section>
 
@@ -87,9 +80,17 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      document.getElementById("navMenu").classList.toggle("active");
-    }
+    document.getElementById("mobile-menu").addEventListener("click", () => {
+      document.getElementById("nav-links").classList.toggle("active");
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
